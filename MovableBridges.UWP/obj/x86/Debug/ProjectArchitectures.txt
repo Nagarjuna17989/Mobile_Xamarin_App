@@ -1,0 +1,1 @@
+Z:\Learning\MovableBridges\MovableBridges\MovableBridges.UWP\MovableBridges.UWP.csproj;x86
