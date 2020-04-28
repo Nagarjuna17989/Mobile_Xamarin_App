@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovableBridges.Views.NavigationDetailPage">
+    <ScrollView Grid.Row="0" HorizontalOptions="Center">
+        <StackLayout Margin="20">
+            <Grid x:Name="DataGrid" ColumnSpacing="0" RowSpacing="0" Margin="20,0,0,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="272"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Margin="5"  Grid.Row="0" Orientation="Horizontal">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Date: " x:Name="lblSelectedDate" HorizontalOptions="Start" VerticalOptions="Center"
+                        FontSize="16" TextColor="Black"   ></Label>
+                    <DatePicker Grid.Row="0" Grid.Column="1" MinimumDate="01/01/2000" MaximumDate="12/31/2100" 
+                      HorizontalOptions="EndAndExpand" x:Name="Date" Date ="{Binding Entry_Date}" FontSize="12"
+                      />
+                </StackLayout>
+
+                <StackLayout Margin="5" Grid.Row="1" Orientation="Horizontal">
+                    <Label Grid.Row="1" Grid.Column="0" x:Name="lblbridge" Text="Districts" 
+                      HorizontalOptions="Start" VerticalTextAlignment="Center" FontSize="16" TextColor="Black" />
+
+                    <Picker Grid.Row="1" Grid.Column="1" x:Name="Districts" Title="Pick a District"
+                         HorizontalOptions="EndAndExpand" 
+                    SelectedIndexChanged="Districts_SelectedIndexChanged" FontSize="12"
+                                        
+                        />
+
+                </StackLayout>
+
+                <StackLayout Margin="5" Grid.Row="2" Orientation="Horizontal" >
+                    <Label Grid.Row="2" Grid.Column="0" x:Name="lblparish" Text="Parish" FontSize="16" TextColor="Black" 
+                         HorizontalOptions="Start"  VerticalTextAlignment="Center"/>
+
+                    <Picker Grid.Row="2" Grid.Column="1" x:Name="Parish" Title="Pick a Parish"
+                        HorizontalOptions="EndAndExpand" FontSize="12" SelectedIndexChanged="Parish_SelectedIndexChanged"
+               />
+
+                </StackLayout>
+
+                <StackLayout Margin="5" Grid.Row="3" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                    <Label Grid.Row="3" Grid.Column="0" x:Name="lblBridge" Text="Bridge" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                    <Picker Grid.Row="3" Grid.Column="1" x:Name="Bridge" Title="Pick a Bridge"  FontSize="12"
+                        HorizontalOptions="EndAndExpand" SelectedIndexChanged="Bridge_SelectedIndexChanged" />
+                </StackLayout>
+
+                <StackLayout Margin="5"  Grid.Row="4" Orientation="Horizontal">
+                    <Label Grid.Row="4" Grid.Column="0" Text="Opening Time: " x:Name="lblotime" HorizontalOptions="Start" VerticalOptions="Center"
+                        FontSize="16" TextColor="Black"   ></Label>
+                    <TimePicker Grid.Row="4" Grid.Column="1" FontSize="12"
+                      HorizontalOptions="EndAndExpand"  x:Name="otime" Time ="{Binding Opening_Time}">
+                        <TimePicker.Format>HH:mm tt
+                        </TimePicker.Format>
+                    </TimePicker>
+                </StackLayout>
+                <StackLayout Margin="5"  Grid.Row="5" Orientation="Horizontal">
+                    <Label Grid.Row="5" Grid.Column="0" Text="Closing Time: " x:Name="lblctime" HorizontalOptions="Start" VerticalOptions="Center"
+                        FontSize="16" TextColor="Black"   ></Label>
+                    <TimePicker Grid.Row="5" Grid.Column="1"  FontSize="12"
+                      HorizontalOptions="EndAndExpand"  x:Name="ctime" Time ="{Binding Closing_Time}">
+                        <TimePicker.Format>HH:mm tt
+                        </TimePicker.Format>
+                    </TimePicker>
+                </StackLayout>
+                <StackLayout Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" WidthRequest="50" Margin="0,50,0,0">
+                    <Grid x:Name="btnGrid"  >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Text="Save" Clicked="OnSaveClicked" BackgroundColor="LightGreen" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+                        <Button Text="Delete" Clicked="OnDeleteClicked" BackgroundColor="LightGreen" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"  />
+                        <Button Text="Cancel" Clicked="OnCancelClicked" BackgroundColor="LightGreen" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" />
+                    </Grid>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovableBridges.Views.StartPage"
+             BackgroundColor="Azure">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="OnItemAdded">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android, UWP" Value="plus.png" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="15"/>
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            <Style x:Key="darkerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="15"/>
+                <Setter Property="FontSize" Value="8" />
+            </Style>
+            <Style x:Key="orangeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="15"/>
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            <Style x:Key="custButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="15"/>
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <Grid x:Name="controlGrid" BackgroundColor="Beige" ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image  Source="Bridge1.jpg" Aspect="Fill" HeightRequest="45"
+                  Grid.Row="0"  
+                  Grid.Column="0"  
+                  BackgroundColor="#81C07B" 
+                  HorizontalOptions="FillAndExpand"  
+                  VerticalOptions="FillAndExpand">
+                <!--<Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemAdded"/>
+                </Image.GestureRecognizers>-->
+            </Image>
+            <ScrollView Grid.Row="1" >
+                <Grid x:Name="contentGrid" ColumnSpacing="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!--<BoxView Color="White" Grid.Row="0" Grid.ColumnSpan="2"/>-->
+                    <BoxView Color="White" Grid.Row="0" Margin="0"/>
+                    <BoxView Color="White" Grid.Row="1"  />
+                    <BoxView Color="White" Grid.Row="0" Grid.Column="1" />
+                    <BoxView Color="White" Grid.Row="1" Grid.Column="1"/>
+                    <!--<Button Text="Top Center"  Style="{StaticResource darkerButton}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />-->
+                    <!--<Label Text="Add/Update Openings" Grid.Row="1" Grid.Column="0" VerticalOptions="End" HorizontalOptions="Center" />-->
+                    <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0">
+                    <Frame Padding="8"   Margin="25,0,10,10"  >
+
+                            <StackLayout WidthRequest="120" HeightRequest="75" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
+                            <Image Source="Fadd.jpg" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"/>
+                            <Label TextColor="Black" 
+                   FontSize="14" HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalTextAlignment="Center" WidthRequest="120" 
+                   VerticalTextAlignment="Start" Text="Add Openings" />
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnItemAdded"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                    </Frame>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand"  HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1">
+                    <Frame Padding="8"  Margin="10,0,25,10"  >
+                            <StackLayout WidthRequest="120" HeightRequest="75" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White">
+                            <Image Source="FMainte.jpg" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"/>
+                            <Label TextColor="Black" 
+                   FontSize="14" HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"  
+                   VerticalTextAlignment="Start" Text="Maintenance" />
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapped"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                    </Frame>
+                    </StackLayout>
+
+                    <StackLayout  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0" >
+                    <Frame Padding="8" Margin="25,5,10,0"  >
+                            <StackLayout WidthRequest="120" HeightRequest="75"  BackgroundColor="White">
+                                <Image Source="Flist.jpg" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                <Label TextColor="Black" 
+                   FontSize="14" HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Start" Text="Openings List" />
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnOpeningsList"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1">
+                    <Frame  Padding="8" Margin="10,5,25,0"  >
+                            <StackLayout WidthRequest="120" HeightRequest="75" BackgroundColor="White">
+                            <Image Source="FReports.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label TextColor="Black"
+                   FontSize="14" HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"  
+                   VerticalTextAlignment="Start" Text="Reports View" />
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                    </StackLayout>
+                    <!--<Button Text="Navigation Openings" Style="{StaticResource darkerButton}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0" />-->
+                    <!--<Button Text="Top Right" Style="{StaticResource orangeButton}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" />
+            <Button Text="Bottom Left" Style="{StaticResource plainButton}"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0" />
+            Button Text="Bottom Right" Style="{StaticResource custButton}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" />
+            -->
+                </Grid>
+            </ScrollView>
+            <StackLayout  Grid.Row="2" Grid.Column="0" >
+                <Label TextColor="Black" Margin="0,0,10,0"
+                   FontSize="12" FontAttributes="Bold" HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center" Text="Contact Info">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnContactTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <!--<StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped"/>
+                    </StackLayout.GestureRecognizers>-->
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovableBridges.Views.Maintenance">
+    <ContentPage.Content>
+        <ScrollView Grid.Row="0">
+
+            <Grid x:Name="DataGrid" ColumnSpacing="0" RowSpacing="0" Margin="20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                     </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="272"/>
+                    <ColumnDefinition Width="272"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                    <StackLayout Margin="5" Grid.Row="0" Orientation="Horizontal">
+                    <Label Grid.Row="0" Grid.Column="0" x:Name="lblDistricts" Text="Districts" VerticalTextAlignment="Center"
+                      HorizontalOptions="Start" VerticalOptions="Center"  FontSize="16" TextColor="Black" />
+
+                    <Picker Grid.Row="0" Grid.Column="1" x:Name="Districts" Title="Pick a District"
+                         HorizontalOptions="EndAndExpand" 
+                     FontSize="16"
+                                        
+                        />
+
+                </StackLayout>
+
+                <StackLayout Margin="5" Grid.Row="1" Orientation="Horizontal">
+                    <Label Grid.Row="1" Grid.Column="0" x:Name="lblparish" Text="Parish" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+
+                    <Picker Grid.Row="1" Grid.Column="1" x:Name="Parish" Title="Pick a Parish"
+                        HorizontalOptions="EndAndExpand" FontSize="16"
+               />
+
+                </StackLayout>
+
+                <StackLayout Margin="5" Grid.Row="2" Orientation="Horizontal">
+                    <Label Grid.Row="2" Grid.Column="0" x:Name="lblBridge" Text="Bridge" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                    <Picker Grid.Row="2" Grid.Column="1" x:Name="Bridge" Title="Pick a Bridge"  FontSize="16"
+                        HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="3"  Orientation="Horizontal">
+                    <Button Text="Save"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" />
+                    <Button Text="Delete"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"  />
+                    <Button Text="Cancel"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="2" VerticalOptions="Center" />
+                </StackLayout>
+
+                             
+
+                
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
