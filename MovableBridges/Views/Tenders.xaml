@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovableBridges.Tenders">
+    <ScrollView Grid.Row="0">
+        <Grid x:Name="DataGrid" ColumnSpacing="0" RowSpacing="0" Margin="20" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="272"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+        <StackLayout  Margin="10,10" VerticalOptions="StartAndExpand" >
+        
+           <StackLayout Orientation="Horizontal" Grid.Row="0">
+            <Label Text="No of Tenders" FontSize="14" x:Name="lblTender"
+                TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="75" Grid.Row="0" Grid.Column="0" />
+                    <Entry Text="{Binding Tender}" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" />
+        </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="1">
+            <Label Text="MilePoint" FontSize="14" x:Name="lblMile"
+                TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="75" Grid.Row="1" Grid.Column="0" />
+                    <Entry Text="{Binding Mile}" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="1" />
+    </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="2">
+            <Label Text="Type of Traffic" FontSize="14" x:Name="lblTraffic"
+                TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="75" Grid.Row="2" Grid.Column="0" />
+                    <Entry Text="{Binding Traffic}" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1" />
+        </StackLayout>
+                <StackLayout Grid.Row="3"  Orientation="Horizontal" WidthRequest="50" Margin="05,10,05,10">
+                    <Button Text="Save"    BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="0"  />
+                    <Button Text="Delete"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="1"   />
+                    <Button Text="Cancel"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="2"  />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
+       
