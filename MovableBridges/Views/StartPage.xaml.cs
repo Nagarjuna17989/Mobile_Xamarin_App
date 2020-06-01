@@ -1,7 +1,9 @@
 ﻿using MovableBridges.Model;
+using MovableBridges.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +18,17 @@ namespace MovableBridges.Views
         public StartPage()
         {
             InitializeComponent();
+            var db = App.Database;
+        }
+
+        private async void Onlogout(object sender, EventArgs e)
+        {
+            var answer = await DisplayAlert("Exit", "Do you wan't to exit the App?", "Yes", "No");
+            if (answer)
+            {
+                await Navigation.PushAsync(new LoginPage() { Title = "Movable Bridges" });
+                Navigation.RemovePage(this);
+            }
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
@@ -27,7 +40,16 @@ namespace MovableBridges.Views
         {
             DisplayAlert("Test","Image Displayed","Close");
         }
-        
+
+        private async void OnMaitenanceTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Maintenance
+            {
+                BindingContext = new Bridge(),
+                Title = "Maintenance"
+            });
+        }
+
         private async void OnOpeningsList(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BridgeListPage

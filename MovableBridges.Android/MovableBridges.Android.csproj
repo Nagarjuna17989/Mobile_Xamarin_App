@@ -58,6 +58,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.6.292</Version>
     </PackageReference>
@@ -107,6 +110,7 @@
     <AndroidResource Include="Resources\drawable\Flist.jpg" />
     <AndroidResource Include="Resources\drawable\FMainte.jpg" />
     <AndroidResource Include="Resources\drawable\FReports.jpg" />
+    <AndroidResource Include="Resources\drawable\logout.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovableBridges\MovableBridges.csproj">

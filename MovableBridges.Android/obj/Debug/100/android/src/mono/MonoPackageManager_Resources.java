@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"MovableBridges.Android.dll",
 		"FormsViewGroup.dll",
 		"MovableBridges.dll",
+		"Newtonsoft.Json.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",

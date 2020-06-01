@@ -1,3 +1,0 @@
-Z:\Learning\MovableBridges\MovableBridges\MovableBridges.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
-Z:\Learning\MovableBridges\MovableBridges\MovableBridges.Android\obj\Debug\81\build.props
-Z:\Learning\MovableBridges\MovableBridges\MovableBridges.Android\obj\Debug\81\adb.props

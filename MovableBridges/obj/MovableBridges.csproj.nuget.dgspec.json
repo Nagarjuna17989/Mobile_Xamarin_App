@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {}
+    "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {}
   },
   "projects": {
-    "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {
+    "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
+        "projectUniqueName": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
         "projectName": "MovableBridges",
-        "projectPath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
+        "projectPath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
         "packagesPath": "C:\\Users\\Pradeep\\.nuget\\packages\\",
-        "outputPath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\obj\\",
+        "outputPath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

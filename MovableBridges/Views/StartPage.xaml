@@ -7,10 +7,10 @@
              x:Class="MovableBridges.Views.StartPage"
              BackgroundColor="Azure">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Clicked="OnItemAdded">
+        <ToolbarItem Text="x" Clicked="Onlogout">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="ImageSource">
-                    <On Platform="Android, UWP" Value="plus.png" />
+                    <On Platform="Android, UWP" Value="logout.jpg"/>
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -111,7 +111,7 @@
                    VerticalTextAlignment="Start" Text="Maintenance" />
 
                             <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnTapped"/>
+                                <TapGestureRecognizer Tapped="OnMaitenanceTapped"/>
                                 </StackLayout.GestureRecognizers>
                             </StackLayout>
                     </Frame>

@@ -14,11 +14,11 @@ namespace MovableBridges
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new NavigationPage(new StartPage { Title = "Movable Bridges", BackgroundColor= Color.DarkOrange });
+            ///MainPage = new NavigationPage(new StartPage { Title = "Movable Bridges", BackgroundColor= Color.DarkOrange });
             //var nav = new NavigationPage(new BridgeListPage());
             //nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
             //nav.BarTextColor = Color.White;
-
+            MainPage = new NavigationPage(new LoginPage { Title = "Movable Bridges" });
             //MainPage = nav;
         }
 

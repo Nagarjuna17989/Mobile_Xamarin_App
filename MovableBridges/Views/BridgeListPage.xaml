@@ -6,15 +6,6 @@
              mc:Ignorable="d"
              x:Class="MovableBridges.Views.BridgeListPage">
     
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Clicked="OnItemAdded">
-            <ToolbarItem.IconImageSource>
-                <OnPlatform x:TypeArguments="ImageSource">
-                    <On Platform="Android, UWP" Value="plus.png" />
-                </OnPlatform>
-            </ToolbarItem.IconImageSource>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>-->
     <StackLayout BackgroundColor="#7F7B7B" >
     <ListView x:Name="listView" Margin="20,0,20,20" HasUnevenRows="True" SeparatorColor="AntiqueWhite" RefreshControlColor="BlueViolet"  Header="" ItemSelected="OnListItemSelected">
         <ListView.HeaderTemplate>
@@ -33,7 +24,7 @@
             <DataTemplate>
                 <ViewCell Height="36" >
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Label FontSize="12" x:Name="Bridge_Name" TextColor="Wheat" Text="{Binding Bridge_Name}" 
+                        <Label FontSize="12" WidthRequest="200" x:Name="Bridge_Name" TextColor="Wheat" Text="{Binding Bridge_Name}" 
                                 VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                             <Label FontSize="12" Text="{Binding Opening_Time , StringFormat='{}{0:hh\\:mm}'}" TextColor="Wheat" 
                                 VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" />
