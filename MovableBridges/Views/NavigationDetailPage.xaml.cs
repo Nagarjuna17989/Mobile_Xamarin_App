@@ -126,11 +126,11 @@ namespace MovableBridges.Views
             Bridge ds = (Bridge)picker.SelectedItem;
             if (ds != null)
             {
-                this.Bridge.WidthRequest = 175;
+                this.Bridge.WidthRequest = 150;
             }
             else
             {
-                this.Bridge.WidthRequest = 75;
+                this.Bridge.WidthRequest = 100;
             }
         }
 

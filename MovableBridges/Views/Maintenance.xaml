@@ -33,7 +33,7 @@
                     <Label Grid.Row="1" Grid.Column="0" x:Name="lblDistricts" Text="Districts" VerticalTextAlignment="Center"
                       HorizontalOptions="Start" VerticalOptions="Center"  FontSize="16" TextColor="Black" />
 
-                    <Picker Grid.Row="1" Grid.Column="1" x:Name="Districts" Title="Pick a District"
+                    <Picker Grid.Row="1" Grid.Column="1" x:Name="Districts" Title="Pick a District" WidthRequest="120"
                          HorizontalOptions="EndAndExpand" FontSize="16" SelectedIndexChanged="DistrictMain_SelectedIndexChanged" />
 
                 </StackLayout>
@@ -41,14 +41,14 @@
                 <StackLayout Margin="5" Grid.Row="2" Orientation="Horizontal">
                     <Label Grid.Row="2" Grid.Column="0" x:Name="lblparish" Text="Parish" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
 
-                    <Picker Grid.Row="2" Grid.Column="1" x:Name="Parish" Title="Pick a Parish"
+                    <Picker Grid.Row="2" Grid.Column="1" x:Name="Parish" Title="Pick a Parish" WidthRequest="120"
                         HorizontalOptions="EndAndExpand" FontSize="16" SelectedIndexChanged="ParishMain_SelectedIndexChanged"/>
 
                 </StackLayout>
 
                 <StackLayout Margin="5" Grid.Row="3" Orientation="Horizontal">
                     <Label Grid.Row="3" Grid.Column="0" x:Name="lblBridge" Text="Bridge" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
-                    <Picker Grid.Row="3" Grid.Column="1" x:Name="Bridge" Title="Pick a Bridge"  
+                    <Picker Grid.Row="3" Grid.Column="1" x:Name="Bridge" Title="Pick a Bridge" WidthRequest="120"
                         HorizontalOptions="EndAndExpand" FontSize="16" SelectedIndexChanged="BridgeMain_SelectedIndexChanged"/>
                 </StackLayout>
 
@@ -63,7 +63,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="280"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
@@ -71,7 +71,7 @@
                             <Label Grid.Row="0" Grid.Column="0" x:Name="lblTenders" Text="Tenders" VerticalTextAlignment="Center"
                       HorizontalOptions="Center" VerticalOptions="Center"  FontSize="16" TextColor="Black" />
                             <Entry Grid.Row="0" Grid.Column="1" x:Name="Tenders" Text ="{Binding Tenders}"
-                        HorizontalOptions="EndAndExpand" FontSize="16" WidthRequest="100"/>
+                        HorizontalOptions="EndAndExpand" FontSize="16" WidthRequest="50"/>
                         </StackLayout>
                         
                         <StackLayout Margin="5" Grid.Row="1" Orientation="Horizontal">
@@ -96,10 +96,10 @@
                             <Label Grid.Row="3"  Grid.Column="1" x:Name="lblMilePoint" Text ="{Binding MilePoint}"  FontSize="16" TextColor="Black" 
                                    VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
-                        <StackLayout Margin="5" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"  Orientation="Horizontal"  >
-                            <Button Text="Save" Clicked="OnMainSaveClicked" BackgroundColor="LightGreen" VerticalOptions="Center" />
-                            <Button Text="Delete" Clicked="OnMainDeleteClicked"  BackgroundColor="LightGreen" VerticalOptions="Center"  />
-                            <Button Text="Cancel" Clicked="OnMainCancelClicked" BackgroundColor="LightGreen" VerticalOptions="Center" />
+                        <StackLayout Margin="5" Grid.Row="5"    Orientation="Horizontal"  >
+                            <Button Grid.Column="0" WidthRequest="126" Text="Save" Clicked="OnMainSaveClicked" BackgroundColor="LightGreen" VerticalOptions="Center" />
+                            <!--<Button Text="Delete" Clicked="OnMainDeleteClicked"  BackgroundColor="LightGreen" VerticalOptions="Center"  />-->
+                            <Button Grid.Column="1" WidthRequest="126" Text="Cancel" Clicked="OnMainCancelClicked" BackgroundColor="LightGreen" VerticalOptions="Center" />
                         </StackLayout>
                     </Grid>
                 </StackLayout>
