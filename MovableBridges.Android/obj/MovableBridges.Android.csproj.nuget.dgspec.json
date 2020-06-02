@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj": {}
+    "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj": {}
   },
   "projects": {
-    "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj": {
+    "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj",
+        "projectUniqueName": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj",
         "projectName": "MovableBridges.Android",
-        "projectPath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj",
+        "projectPath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges.Android\\MovableBridges.Android.csproj",
         "packagesPath": "C:\\Users\\Pradeep\\.nuget\\packages\\",
-        "outputPath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges.Android\\obj\\",
+        "outputPath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {
-                "projectPath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj"
+              "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {
+                "projectPath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid10.0": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.2, )"
@@ -58,14 +62,14 @@
         }
       }
     },
-    "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {
+    "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
+        "projectUniqueName": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
         "projectName": "MovableBridges",
-        "projectPath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
+        "projectPath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\MovableBridges.csproj",
         "packagesPath": "C:\\Users\\Pradeep\\.nuget\\packages\\",
-        "outputPath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges\\obj\\",
+        "outputPath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -102,6 +106,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

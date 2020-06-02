@@ -1,4 +1,5 @@
 ﻿using MovableBridges.Model;
+using MovableBridges.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace MovableBridges.Views
             base.OnAppearing();
             var detail = (vmDetail)BindingContext;
 
-            var dsList = App.Database.DistrictList();
+            dsList = App.Database.GetDistrictcItemsAsync().Result;
             
             this.Districts.ItemsSource = dsList;
             this.Districts.ItemDisplayBinding = new Binding("District_Name");
@@ -35,7 +36,10 @@ namespace MovableBridges.Views
             this.Parish.IsEnabled = false;
             this.Bridge.IsEnabled = false;
 
-
+            if (detail.ID == 0)
+            {
+                this.DtSelectedDate.Date = DateTime.Now;
+            }
             if (detail.district != null)
             {
                 this.Districts.SelectedItem = (from p in dsList
@@ -50,7 +54,9 @@ namespace MovableBridges.Views
         {
             var detail = (vmDetail)BindingContext;
             var opening = new NavigationOpening();
-            if(detail.ID == 0)
+
+
+            if (detail.ID == 0)
             {
                 opening.Date_Created = DateTime.Now;
                 opening.Date_Modified = DateTime.Now;
@@ -117,15 +123,14 @@ namespace MovableBridges.Views
         private void Bridge_SelectedIndexChanged(object sender, EventArgs e)
         {
             var picker = sender as Picker;
-            Bridge ds = new Bridge();
-            ds = (Bridge)picker.SelectedItem;
+            Bridge ds = (Bridge)picker.SelectedItem;
             if (ds != null)
             {
-                this.Bridge.WidthRequest = 175;
+                this.Bridge.WidthRequest = 150;
             }
             else
             {
-                this.Bridge.WidthRequest = 75;
+                this.Bridge.WidthRequest = 100;
             }
         }
 
@@ -136,7 +141,7 @@ namespace MovableBridges.Views
             ds = (Parish)picker.SelectedItem;
             if (ds != null)
             {
-                bList = App.Database.BridgeList();
+                bList = App.Database.GetBridgeItemsAsync().Result;
                 this.Bridge.ItemsSource = bList.Where(p => p.Parish_Id == ds.ID).ToList();
                 this.Bridge.ItemDisplayBinding = new Binding("Bridge_Name");
                 this.Bridge.IsEnabled = true;
@@ -167,7 +172,7 @@ namespace MovableBridges.Views
             ds = (District)picker.SelectedItem;
             if (ds != null)
             {
-                pList = App.Database.ParishList();
+                pList = App.Database.GetParishItemsAsync().Result;
                 this.Parish.ItemsSource = pList.Where(p => p.District_ID == ds.ID).ToList();
                 this.Parish.ItemDisplayBinding = new Binding("Parish_Name");
                 this.Parish.IsEnabled = true;

@@ -23,7 +23,7 @@ namespace MovableBridges.Views {
         private global::Xamarin.Forms.Label lblSelectedDate;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.DatePicker Date;
+        private global::Xamarin.Forms.DatePicker DtSelectedDate;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label lblbridge;
@@ -63,7 +63,7 @@ namespace MovableBridges.Views {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(NavigationDetailPage));
             DataGrid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "DataGrid");
             lblSelectedDate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblSelectedDate");
-            Date = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "Date");
+            DtSelectedDate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "DtSelectedDate");
             lblbridge = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblbridge");
             Districts = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "Districts");
             lblparish = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblparish");

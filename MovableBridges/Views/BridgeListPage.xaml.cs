@@ -1,4 +1,5 @@
 ﻿using MovableBridges.Model;
+using MovableBridges.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,12 +43,12 @@ namespace MovableBridges.Views
             {
                 var opening = (NavigationOpening)e.SelectedItem;
 
-                var detail = new vmDetail();
+                vmDetail detail = new vmDetail();
 
                 detail.ID = opening.ID;
-                var dsList = App.Database.DistrictList();
-                var pList = App.Database.ParishList();
-                var bList = App.Database.BridgeList();
+                var dsList = App.Database.GetDistrictcItemsAsync().Result;
+                var pList = App.Database.GetParishItemsAsync().Result;
+                var bList = App.Database.GetBridgeItemsAsync().Result;
 
                 var bridge = new Bridge();
                 bridge = (from p in bList

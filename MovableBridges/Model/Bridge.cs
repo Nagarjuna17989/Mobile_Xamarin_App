@@ -13,8 +13,11 @@ namespace MovableBridges.Model
         public string Bridge_Name { get; set; }
         public string Type_Draw { get; set; }     
         public int Tenders { get; set; }
-        public double MilePoint { get; set; }
-        public string StateRoute { get; set; }
+        public double Mile_Point { get; set; }
+        public string State_Route { get; set; }
         public int Parish_Id { get; set; }
+        public string User_Modified { get; set; }
+        public DateTime Date_Created { get; set; }
+        public DateTime Date_Modified { get; set; }
     }
 }

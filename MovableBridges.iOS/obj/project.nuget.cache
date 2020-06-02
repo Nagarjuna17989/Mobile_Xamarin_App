@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dVSp4BsLJoFpfpqnzILczFRgAMwmRIa0kwRoiOYEPoD7pHhGfLP3FP+DmBel8BIG+QOAS1c9PFHvibXNOS4oGQ==",
+  "dgSpecHash": "EfLla5HYPvSdIULPUfpcLHwYzhOtgKoQuI5K6vVIwF+9LzeWwT4zUVKJxEPm3WPpeyCFymmjBWteq6avw+184Q==",
   "success": true,
-  "projectFilePath": "Z:\\Learning\\MovableBridges\\MovableBridges\\MovableBridges.iOS\\MovableBridges.iOS.csproj",
+  "projectFilePath": "Z:\\Learning\\GitHub\\MovableBridges\\MovableBridges.iOS\\MovableBridges.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Pradeep\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Pradeep\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
     "C:\\Users\\Pradeep\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
     "C:\\Users\\Pradeep\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",

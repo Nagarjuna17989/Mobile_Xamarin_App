@@ -5,57 +5,104 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MovableBridges.Views.Maintenance">
+    
     <ContentPage.Content>
+        
         <ScrollView Grid.Row="0">
-
-            <Grid x:Name="DataGrid" ColumnSpacing="0" RowSpacing="0" Margin="20" >
+            <Grid x:Name="DataGrid" ColumnSpacing="0" RowSpacing="0" Margin="20"  >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
-                     </Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="272"/>
-                    <ColumnDefinition Width="272"/>
+                    <ColumnDefinition Width="300"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
-                    <StackLayout Margin="5" Grid.Row="0" Orientation="Horizontal">
-                    <Label Grid.Row="0" Grid.Column="0" x:Name="lblDistricts" Text="Districts" VerticalTextAlignment="Center"
-                      HorizontalOptions="Start" VerticalOptions="Center"  FontSize="16" TextColor="Black" />
-
-                    <Picker Grid.Row="0" Grid.Column="1" x:Name="Districts" Title="Pick a District"
-                         HorizontalOptions="EndAndExpand" 
-                     FontSize="16"
-                                        
-                        />
-
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Button Text="Sync Data to Server" Clicked="OnSendDatatoServer"  BackgroundColor="LightGreen"></Button>
                 </StackLayout>
+                <!--<StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Button Text="Refresh Data" BackgroundColor="LightGreen"></Button>
+                </StackLayout>-->
 
                 <StackLayout Margin="5" Grid.Row="1" Orientation="Horizontal">
-                    <Label Grid.Row="1" Grid.Column="0" x:Name="lblparish" Text="Parish" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                    <Label Grid.Row="1" Grid.Column="0" x:Name="lblDistricts" Text="Districts" VerticalTextAlignment="Center"
+                      HorizontalOptions="Start" VerticalOptions="Center"  FontSize="16" TextColor="Black" />
 
-                    <Picker Grid.Row="1" Grid.Column="1" x:Name="Parish" Title="Pick a Parish"
-                        HorizontalOptions="EndAndExpand" FontSize="16"
-               />
+                    <Picker Grid.Row="1" Grid.Column="1" x:Name="Districts" Title="Pick a District" WidthRequest="120"
+                         HorizontalOptions="EndAndExpand" FontSize="16" SelectedIndexChanged="DistrictMain_SelectedIndexChanged" />
 
                 </StackLayout>
 
                 <StackLayout Margin="5" Grid.Row="2" Orientation="Horizontal">
-                    <Label Grid.Row="2" Grid.Column="0" x:Name="lblBridge" Text="Bridge" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
-                    <Picker Grid.Row="2" Grid.Column="1" x:Name="Bridge" Title="Pick a Bridge"  FontSize="16"
-                        HorizontalOptions="EndAndExpand"/>
-                </StackLayout>
-                <StackLayout Grid.Row="3"  Orientation="Horizontal">
-                    <Button Text="Save"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" />
-                    <Button Text="Delete"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"  />
-                    <Button Text="Cancel"  BackgroundColor="LightGreen" Grid.Row="3" Grid.Column="2" VerticalOptions="Center" />
+                    <Label Grid.Row="2" Grid.Column="0" x:Name="lblparish" Text="Parish" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+
+                    <Picker Grid.Row="2" Grid.Column="1" x:Name="Parish" Title="Pick a Parish" WidthRequest="120"
+                        HorizontalOptions="EndAndExpand" FontSize="16" SelectedIndexChanged="ParishMain_SelectedIndexChanged"/>
+
                 </StackLayout>
 
-                             
+                <StackLayout Margin="5" Grid.Row="3" Orientation="Horizontal">
+                    <Label Grid.Row="3" Grid.Column="0" x:Name="lblBridge" Text="Bridge" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                    <Picker Grid.Row="3" Grid.Column="1" x:Name="Bridge" Title="Pick a Bridge" WidthRequest="120"
+                        HorizontalOptions="EndAndExpand" FontSize="16" SelectedIndexChanged="BridgeMain_SelectedIndexChanged"/>
+                </StackLayout>
 
-                
+                <StackLayout Grid.Row="4" Grid.ColumnSpan="3" Orientation="Horizontal" WidthRequest="50" >
+                    <Grid x:Name="DetailsGrid"  >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="280"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Margin="5" Grid.Row="0" Orientation="Horizontal">
+                            <Label Grid.Row="0" Grid.Column="0" x:Name="lblTenders" Text="Tenders" VerticalTextAlignment="Center"
+                      HorizontalOptions="Center" VerticalOptions="Center"  FontSize="16" TextColor="Black" />
+                            <Entry Grid.Row="0" Grid.Column="1" x:Name="Tenders" Text ="{Binding Tenders}"
+                        HorizontalOptions="EndAndExpand" FontSize="16" WidthRequest="50"/>
+                        </StackLayout>
+                        
+                        <StackLayout Margin="5" Grid.Row="1" Orientation="Horizontal">
+                            <Label Grid.Row="1" Grid.Column="0"  Text="Recall No." FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                            <Label Grid.Row="1" Grid.Column="1" x:Name="Recall_Numer" Text ="{Binding Recall_Number}" FontSize="16" TextColor="Black" 
+                                   VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        
+                        <StackLayout Margin="5" Grid.Row="2" Orientation="Horizontal">
+                            <Label Grid.Row="1" Grid.Column="0"  Text="TypeDraw" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                            <Label Grid.Row="1" Grid.Column="1" x:Name="lblTypeDraw" Text ="{Binding Type_Draw}" FontSize="16" TextColor="Black" 
+                                   VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Margin="5" Grid.Row="3" Orientation="Horizontal">
+                            <Label Grid.Row="2" Grid.Column="0"  Text="StateRoute" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                            <Label Grid.Row="2" Grid.Column="1" x:Name="lblStateRoute" Text ="{Binding StateRoute}" FontSize="16" 
+                                   TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="5" Grid.Row="4" Orientation="Horizontal">
+                            <Label Grid.Row="3"  Grid.Column="0"  Text="MilePoint" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"/>
+                            <Label Grid.Row="3"  Grid.Column="1" x:Name="lblMilePoint" Text ="{Binding MilePoint}"  FontSize="16" TextColor="Black" 
+                                   VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Margin="5" Grid.Row="5"    Orientation="Horizontal"  >
+                            <Button Grid.Column="0" WidthRequest="126" Text="Save" Clicked="OnMainSaveClicked" BackgroundColor="LightGreen" VerticalOptions="Center" />
+                            <!--<Button Text="Delete" Clicked="OnMainDeleteClicked"  BackgroundColor="LightGreen" VerticalOptions="Center"  />-->
+                            <Button Grid.Column="1" WidthRequest="126" Text="Cancel" Clicked="OnMainCancelClicked" BackgroundColor="LightGreen" VerticalOptions="Center" />
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
 
             </Grid>
         </ScrollView>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovableBridges.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20,20,20,60"   Spacing="70" Margin="0,99,0,0" >
+            <Grid x:Name="DataGridL" ColumnSpacing="0" RowSpacing="0" Margin="20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="272"/>
+                    <ColumnDefinition Width="272"/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Margin="5"  Grid.Row="0"  Orientation="Horizontal" >
+                    <Label Grid.Row="0" Grid.Column="0" Text="Login Id:" x:Name="lbllogin"
+                       VerticalTextAlignment="Center"
+                          
+                        FontSize="Large" 
+                        FontAttributes="Bold"
+                           />
+                    <Entry x:Name="loginid"
+                   Placeholder="Enter Your Login"
+                  Grid.Row="0" Grid.Column="1"
+                       HorizontalOptions="StartAndExpand"
+                       FontSize="Small" />
+
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="1">
+                    <Button x:Name="loginButton"
+                    Text="Login"
+                    FontSize="Small"
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="1" Grid.ColumnSpan="2"
+                   BackgroundColor="SkyBlue"
+                    Clicked="loginButton_Clicked"/>
+                </StackLayout>
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
